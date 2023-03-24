@@ -1,4 +1,4 @@
-exports.config = {
+export const config = {
     //
     // ====================
     // Runner Configuration
@@ -6,20 +6,6 @@ exports.config = {
     // WebdriverIO supports running e2e tests as well as unit and component tests.
     runner: 'local',
     
-    //
-    // =====================
-    // Server Configurations
-    // =====================
-    // Host address of the running Selenium server. This information is usually obsolete as
-    // WebdriverIO automatically connects to localhost. Also, if you are using one of the
-    // supported cloud services like Sauce Labs, Browserstack, Testing Bot or LambdaTest you don't
-    // need to define host and port information because WebdriverIO can figure that out
-    // according to your user and key information. However, if you are using a private Selenium
-    // backend you should define the host address, port, and path here.
-    //
-    hostname: 'localhost',
-    port: 4444,
-    path: '/',
     //
     // ==================
     // Specify Test Files
@@ -37,7 +23,7 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        // ToDo: define location for spec files here
+        './test/specs/**/*.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -110,7 +96,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost',
+    baseUrl: 'y',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
